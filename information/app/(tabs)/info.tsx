@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, useWindowDimensions } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 
 export default function Profile() {
@@ -15,30 +15,35 @@ export default function Profile() {
     contact,
   } = useLocalSearchParams();
 
+  const { width } = useWindowDimensions();
+
+  const titleSize = width * 0.08;
+  const textSize = width * 0.045;
+
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: '#FF6B00', paddingVertical: 30 }}>
-      <View style={{ width: '100%', paddingHorizontal: 20, marginTop: 50, }}>
+    <ScrollView style={{ flex: 1, backgroundColor: '#FF6B00', paddingVertical: width * 0.06 }}>
+      <View style={{ width: '100%', paddingHorizontal: width * 0.05, marginTop: width * 0.12 }}>
         <View style={{
           backgroundColor: '#1a1a1a',
           borderRadius: 20,
-          padding: 20,
+          padding: width * 0.05,
         }}>
           <Text style={{
-            fontSize: 36,
+            fontSize: titleSize,
             fontWeight: '700',
             color: '#FFB74D',
             textAlign: 'center',
-            marginBottom: 25,
+            marginBottom: width * 0.06,
           }}>Profile</Text>
 
           <Text style={{
             color: '#FFB74D',
-            fontSize: 20,
-            marginTop: 10,
+            fontSize: textSize,
+            marginTop: width * 0.03,
             backgroundColor: '#000',
             borderRadius: 12,
             width: '100%',
-            padding: 10,
+            padding: width * 0.03,
             shadowColor: '#000',
             shadowOpacity: 0.4,
             shadowOffset: { width: 0, height: 2 },
@@ -48,12 +53,12 @@ export default function Profile() {
 
           <Text style={{
             color: '#FFB74D',
-            fontSize: 20,
-            marginTop: 15,
+            fontSize: textSize,
+            marginTop: width * 0.04,
             backgroundColor: '#000',
             borderRadius: 12,
             width: '100%',
-            padding: 10,
+            padding: width * 0.03,
             shadowColor: '#000',
             shadowOpacity: 0.4,
             shadowOffset: { width: 0, height: 2 },
@@ -63,12 +68,12 @@ export default function Profile() {
 
           <Text style={{
             color: '#FFB74D',
-            fontSize: 20,
-            marginTop: 15,
+            fontSize: textSize,
+            marginTop: width * 0.04,
             backgroundColor: '#000',
             borderRadius: 12,
             width: '100%',
-            padding: 10,
+            padding: width * 0.03,
             shadowColor: '#000',
             shadowOpacity: 0.4,
             shadowOffset: { width: 0, height: 2 },
@@ -76,15 +81,14 @@ export default function Profile() {
             elevation: 4,
           }}>Middle Name: {mname}</Text>
 
-
           <Text style={{
             color: '#FFB74D',
-            fontSize: 20,
-            marginTop: 15,
+            fontSize: textSize,
+            marginTop: width * 0.04,
             backgroundColor: '#000',
             borderRadius: 12,
             width: '100%',
-            padding: 10,
+            padding: width * 0.03,
             shadowColor: '#000',
             shadowOpacity: 0.4,
             shadowOffset: { width: 0, height: 2 },
@@ -94,12 +98,12 @@ export default function Profile() {
 
           <Text style={{
             color: '#FFB74D',
-            fontSize: 20,
-            marginTop: 15,
+            fontSize: textSize,
+            marginTop: width * 0.04,
             backgroundColor: '#000',
             borderRadius: 12,
             width: '100%',
-            padding: 10,
+            padding: width * 0.03,
             shadowColor: '#000',
             shadowOpacity: 0.4,
             shadowOffset: { width: 0, height: 2 },
@@ -109,12 +113,12 @@ export default function Profile() {
 
           <Text style={{
             color: '#FFB74D',
-            fontSize: 20,
-            marginTop: 15,
+            fontSize: textSize,
+            marginTop: width * 0.04,
             backgroundColor: '#000',
             borderRadius: 12,
             width: '100%',
-            padding: 10,
+            padding: width * 0.03,
             shadowColor: '#000',
             shadowOpacity: 0.4,
             shadowOffset: { width: 0, height: 2 },
@@ -122,15 +126,14 @@ export default function Profile() {
             elevation: 4,
           }}>Age: {userAge}</Text>
 
-
           <Text style={{
             color: '#FFB74D',
-            fontSize: 20,
-            marginTop: 15,
+            fontSize: textSize,
+            marginTop: width * 0.04,
             backgroundColor: '#000',
             borderRadius: 12,
             width: '100%',
-            padding: 10,
+            padding: width * 0.03,
             shadowColor: '#000',
             shadowOpacity: 0.4,
             shadowOffset: { width: 0, height: 2 },
@@ -140,12 +143,12 @@ export default function Profile() {
 
           <Text style={{
             color: '#FFB74D',
-            fontSize: 20,
-            marginTop: 15,
+            fontSize: textSize,
+            marginTop: width * 0.04,
             backgroundColor: '#000',
             borderRadius: 12,
             width: '100%',
-            padding: 10,
+            padding: width * 0.03,
             shadowColor: '#000',
             shadowOpacity: 0.4,
             shadowOffset: { width: 0, height: 2 },
